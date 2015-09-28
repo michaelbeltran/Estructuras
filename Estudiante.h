@@ -2,7 +2,7 @@
 #define _ESTUDIANTE_
 class Estudiante{
 	long int codigo;
-	char *nombre:
+	char *nombre;
 	char *carrera;
 	short int edad;
 	unsigned int dia;
@@ -12,6 +12,10 @@ class Estudiante{
 	Estudiante *sig;
 	Estudiante *ant;
 	public:
-		//
+		Estudiante(bool);
+		void crearCab(Estudiante *&);
+		void agregarNodo(Estudiante *&);
+		void crearLista(Estudiante *&);
+		void mostrar(Estudiante *);
 };
 #endif
