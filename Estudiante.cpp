@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include <stdlib.h>
 #include "Estudiante.h"
 using namespace std;
@@ -84,6 +85,58 @@ void Estudiante::mostrar(Estudiante *cab){
 		cout<<"Fecha de ingreso: "<<aux->dia<<"/"<<aux->mes<<"/"<<aux->anio<<endl;
 		cout<<"Promedio: "<<aux->promedio<<endl;
 		cout<<"***************************************"<<endl;
+		aux = aux->sig;
+	}
+}
+int Estudiante::numeroNod(Estudiante *cab){
+	Estudiante *aux = cab;
+	int contador=0;
+	while(aux){
+		contador++;
+		aux = aux->sig;
+	}
+	return contador;
+}
+void Estudiante::ordenarNod(Estudiante *cab){
+	Estudiante *aux = cab, *temp = NULL;
+	int numero_nod = numeroNod(cab);
+	/*for(int = 1; i<numero_nod; i++){
+		temp = aux->sig;
+		j = i-1;
+		while(aux	)
+	}*/
+
+}
+void Estudiante::borrarCodigo(Estudiante *cab, int codigo){
+	Estudiante *aux = cab;
+	while(aux){
+		if(aux->codigo == codigo){
+			if(aux == cab){
+				cab = cab->sig;
+				cab->ant = NULL;
+			}else{
+				aux->sig->ant = aux->ant;
+				aux = aux->sig;
+			}
+				
+			break;
+		}else
+			aux = aux->sig;
+	}
+}
+void Estudiante::borrarCarrera(Estudiante *cab, char *carrera){
+	Estudiante *aux = cab;
+	while(aux){
+		if(strcmp(aux->carrera, carrera) == 0){
+			if(aux == cab){
+				cab = cab->sig;
+				cab->ant = NULL;
+				aux = cab;
+			}else{
+				aux->sig->ant = aux->ant;
+				aux = aux->sig;
+			}
+		}
 		aux = aux->sig;
 	}
 }

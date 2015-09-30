@@ -18,5 +18,9 @@ class Estudiante{
 		void crearLista(Estudiante *&);
 		void mostrar(Estudiante *);
 		void potato(Estudiante *);
+		int numeroNod(Estudiante *);
+		void ordenarNod(Estudiante *);
+		void borrarCodigo(Estudiante *, int);
+		void borrarCarrera(Estudiante *, char *);
 };
 #endif
