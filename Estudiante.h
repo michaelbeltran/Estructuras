@@ -17,5 +17,6 @@ class Estudiante{
 		void agregarNodo(Estudiante *&);
 		void crearLista(Estudiante *&);
 		void mostrar(Estudiante *);
+		void potato(Estudiante *);
 };
 #endif
