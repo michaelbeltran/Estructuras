@@ -17,10 +17,13 @@ class Estudiante{
 		void agregarNodo(Estudiante *&);
 		void crearLista(Estudiante *&);
 		void mostrar(Estudiante *);
-		void potato(Estudiante *);
+		void pruebaAca(Estudiante *);
+		void tiempo(Estudiante *);
+		void edadEstudiante(Estudiante *);
 		int numeroNod(Estudiante *);
 		void ordenarNod(Estudiante *);
-		void borrarCodigo(Estudiante *, int);
-		void borrarCarrera(Estudiante *, char *);
+		void borrarCodigo(Estudiante *&);
+		void borrarCarrera(Estudiante *&);
+		bool buscarCodigo(Estudiante *, int);
 };
 #endif

@@ -25,14 +25,19 @@ int main(){
 				objeto.mostrar(cab);
 				break;
 			case 3:
+				objeto.borrarCodigo(cab);
 				break;
 			case 4:
+				objeto.borrarCarrera(cab);
 				break;
 			case 5:
+				objeto.tiempo(cab);
 				break;
 			case 6:
+				objeto.edadEstudiante(cab);
 				break;
 			case 7:
+				objeto.pruebaAca(cab);
 				break;
 			case 8:
 				cout<<"Adios"<<endl;
